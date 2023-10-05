@@ -4,13 +4,22 @@ let wicket = 0;
 let ballWiseRes = [];
 function clickWicket() {
     if(wicket<10) {
-    
+    ballWiseRes.push("W");
     wicket++;
-    RootElement.render(<>
-        <App />
-       </>)}
+    console.log(ballWiseRes);
+    
+    RootElement.render(<> <App /></>)}
 }
 //functional component for the button 
+function addScore(num) {
+   if(wicket < 10) {
+     ballWiseRes.push(num);
+    score+=num;
+    console.log(ballWiseRes);
+    RootElement.render(<> <App /></>)}
+
+   }
+
 const ScoreBtn = ()=> {
     return (
 
